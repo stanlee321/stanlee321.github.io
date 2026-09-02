@@ -3,8 +3,10 @@
 The maintainer's hub for this repo. **Not built** — `docs/` is in the `exclude:`
 list in `_config.yml`, so nothing here ships to the public site.
 
-Start with `../CLAUDE.md` (the maintainer-agent guide). This wiki holds the
-long-form versions of what that file summarizes.
+Start with `../CLAUDE.md` (the maintainer-agent guide) and the project skill
+`../.claude/skills/site-maintain/SKILL.md` (invoke `/site-maintain`: the playbooks
+for NEW-POST, REVIEW, PUBLISH, FIX-BUILD, PROFILE-README). This wiki holds the
+long-form versions of what those two files summarize.
 
 ---
 
@@ -38,7 +40,7 @@ his explicit OK.**
 ## The stack, in one paragraph
 
 GitHub-native Jekyll. No GitHub Actions, no Gemfile, no Node, no build step.
-Markdown is kramdown with `math_engine: nil`; math renders client-side via KaTeX
+Markdown is kramdown with `math_engine: null`; math renders client-side via KaTeX
 loaded in `_layouts/default.html`. Plugins are limited to the GitHub Pages
 whitelist — currently `jekyll-seo-tag`, `jekyll-feed`, `jekyll-sitemap`. The
 theme is hand-written: three layouts plus `assets/css/style.css` (~230 lines, no
@@ -58,16 +60,15 @@ should still build in five years with nobody maintaining a toolchain.
 
 ## Known open items
 
-- `linkedin_url` in `_config.yml` is the literal placeholder `TODO-LINKEDIN-URL`,
-  and `index.md` renders it as visible text. It must be replaced before or
-  immediately after launch.
+- LinkedIn: no URL yet; the placeholder was removed everywhere. Add `linkedin_url`
+  to `_config.yml` and the link bullets back when Stanley supplies it.
+- Deep Microsystems' site does not resolve; it is named, not linked, until it does.
 - `projects.md` is a placeholder; a real curated list is owed.
-- The site has one post, so `/blog/` is a one-item list and post prev/next nav
-  renders empty.
-- No Jekyll build has ever been run locally (no local Jekyll, Docker down). The
-  first real build will be the GitHub Pages build. See `setup.md`.
-- Custom domain `salvatierra.io` is deferred; steps are written down in
-  `setup.md`.
+- One post, so `/blog/` is a one-item list and post prev/next nav renders empty.
+- A public, paper-scoped coset explainer is owed if wanted (the internal one was
+  withheld — see `log.md`).
+- Custom domain `salvatierra.io` is deferred; steps are in `setup.md` §4.
+- The profile repo's stale `gh-pages` branch (2020 test blog) awaits Stanley's call.
 
 ## Standing hazards
 
@@ -77,3 +78,5 @@ should still build in five years with nobody maintaining a toolchain.
 - **A new non-public directory must be added to `exclude:` in the same edit**,
   or Jekyll publishes it.
 - **A non-whitelisted plugin fails silently** — the page just renders wrong.
+- **kramdown emits block math as `\[ \]`** — KaTeX must keep those delimiters.
+- **`exclude:` is not privacy.** The repo is public; anything committed is readable.

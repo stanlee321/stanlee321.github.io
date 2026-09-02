@@ -102,3 +102,14 @@ post: kramdown emits block math as `\[ … \]` (and inline as `\( … \)`) when
 `math_engine` is null, and the KaTeX auto-render config only listed `$`
 delimiters, so the pipeline formula showed raw TeX. Fixed by adding the
 `\[ \]` and `\( \)` delimiters in `_layouts/default.html`.
+
+## 2026-09-01 — Maintenance skill added
+
+`/site-maintain` project skill (`.claude/skills/site-maintain/SKILL.md`): ORIENT
+read order, the four non-bending rules, playbooks (NEW-POST, UPDATE-PAGE,
+ADD-PUBLICATION, REVIEW, PUBLISH, FIX-BUILD, PROFILE-README, DOMAIN), the
+hazards list, the file map. Two helpers: `scripts/pages_build_wait.sh` (polls
+the Pages build for a given commit) and `scripts/live_check.sh` (200/404
+matrix, social-card tags, served-content term sweep). `docs/index.md` open
+items refreshed (LinkedIn placeholder removed, math_engine null, explainer owed).
+Profile repo purged to README + LICENSE; stale branches deleted.

@@ -144,7 +144,7 @@ grep -n '}}' _posts/*.md | grep -v relative_url    # must return nothing
 ### Math
 
 `$...$` inline, `$$...$$` display. KaTeX auto-render is wired up in
-`_layouts/default.html`; kramdown is set to `math_engine: nil` so the LaTeX
+`_layouts/default.html`; kramdown is set to `math_engine: null` (a YAML null, never the string `nil`) so the LaTeX
 passes through untouched. Nothing to configure per-post.
 
 ### Images

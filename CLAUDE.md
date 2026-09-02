@@ -6,6 +6,11 @@ Jekyll build, so it never ships.
 
 ---
 
+> **Project skill:** `/site-maintain` (`.claude/skills/site-maintain/SKILL.md`) is
+> the step-by-step playbook for every routine request on this repo — read it after
+> this file. Helper scripts: `scripts/site_lint.py`, `scripts/pages_build_wait.sh`,
+> `scripts/live_check.sh`.
+
 ## 1. Purpose and authority
 
 **What this repo is.** The public personal site and blog of Stanley Salvatierra
@@ -75,7 +80,7 @@ That is a deliberate constraint: the site has to survive years of neglect.
   ignored and the page renders wrong.
 - **No `remote_theme`, no custom theme gem.** The theme is the three layouts
   plus `assets/css/style.css`, hand-written, in-repo.
-- **Markdown is kramdown** with `math_engine: nil`, so LaTeX passes through
+- **Markdown is kramdown** with `math_engine: null` (a real YAML null — the string `nil` breaks the build), so LaTeX passes through
   untouched to KaTeX in the browser.
 - **If you add a `Gemfile` at all** it must contain exactly the `github-pages`
   gem and nothing else. Preferably do not add one.

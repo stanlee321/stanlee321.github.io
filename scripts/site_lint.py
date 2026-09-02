@@ -30,7 +30,7 @@ errors, warnings, notes = [], [], []
 def rel(p): return os.path.relpath(p, ROOT)
 
 # ---------- collect files ----------
-SKIP_DIRS = {".git", "_site", ".jekyll-cache", ".sass-cache", "scratch", "node_modules"}
+SKIP_DIRS = {".git", "_site", ".jekyll-cache", ".sass-cache", "scratch", "node_modules", ".claude"}
 
 # Honour _config.yml's `exclude:` list. Files Jekyll does not build must not be
 # linted as if they were site content -- CLAUDE.md and docs/ deliberately quote
