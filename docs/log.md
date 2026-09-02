@@ -92,3 +92,13 @@ Five audit lenses ran over the build. Fixed by hand in the main thread:
 - Gates re-run clean: lint PASS (0 errors); the term sweep over ALL files finds
   only policy phrasings; `quantum` appears only in the verbatim sentence and in
   policy text.
+
+## 2026-09-01 — Published + first build fix
+
+Repo `stanlee321/stanlee321.github.io` created (public), Pages enabled from
+`main` root; first build succeeded (40 s). Live check: all pages 200, excluded
+files 404, og/twitter tags present. One rendering defect found in the live
+post: kramdown emits block math as `\[ … \]` (and inline as `\( … \)`) when
+`math_engine` is null, and the KaTeX auto-render config only listed `$`
+delimiters, so the pipeline formula showed raw TeX. Fixed by adding the
+`\[ \]` and `\( \)` delimiters in `_layouts/default.html`.
