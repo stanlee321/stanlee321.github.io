@@ -11,8 +11,8 @@ while [ "$t" -lt "$MAX" ]; do
   sha=$(printf '%s' "$j" | python3 -c 'import sys,json;d=json.load(sys.stdin);print(d.get("commit") or "")')
   if [ -n "$WANT" ] && [ "${sha#"$WANT"}" = "$sha" ]; then sleep 10; t=$((t+10)); continue; fi
   case "$st" in
-    built)   printf '%s' "$j" | python3 -c 'import sys,json;d=json.load(sys.stdin);print(f"BUILT commit={d[\"commit\"]} duration={d[\"duration\"]}ms")'; exit 0;;
-    errored) printf '%s' "$j" | python3 -c 'import sys,json;d=json.load(sys.stdin);print(f"ERRORED commit={d[\"commit\"]} error={(d.get(\"error\") or {}).get(\"message\")}")'; exit 1;;
+    built)   printf '%s' "$j" | python3 -c 'import sys,json;d=json.load(sys.stdin);print("BUILT commit=%s duration=%sms"%(d["commit"],d["duration"]))'; exit 0;;
+    errored) printf '%s' "$j" | python3 -c 'import sys,json;d=json.load(sys.stdin);print("ERRORED commit=%s error=%s"%(d["commit"],(d.get("error") or {}).get("message")))'; exit 1;;
   esac
   sleep 10; t=$((t+10))
 done
