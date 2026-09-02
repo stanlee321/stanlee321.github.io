@@ -1,0 +1,8 @@
+_site/
+.jekyll-cache/
+.sass-cache/
+.DS_Store
+scratch/
+
+# The review-gate term list is itself an index of what must not be public.
+.forbidden-terms

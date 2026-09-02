@@ -1,0 +1,58 @@
+title: Stanley Salvatierra
+description: >-
+  ML engineer and researcher working on language as operator algebra, and building at Deep Microsystems.
+url: "https://stanlee321.github.io"
+baseurl: ""
+lang: en
+
+author:
+  name: Stanley Salvatierra
+  twitter: iamatachyon
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  math_engine: null   # YAML null (NOT the string "nil"); math is rendered client-side by KaTeX
+  syntax_highlighter: rouge
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-sitemap
+
+twitter:
+  username: iamatachyon
+  card: summary_large_image
+
+social:
+  name: Stanley Salvatierra
+  links:
+    - https://github.com/stanlee321
+    - https://x.com/iamatachyon
+
+github_username: stanlee321
+twitter_username: iamatachyon
+# linkedin_url: (add when available; index.md and the profile README pick it up)
+
+permalink: /blog/:year/:month/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
+
+exclude:
+  - CLAUDE.md
+  - docs/
+  - README.md
+  - scripts/
+  - LICENSE
+  - Makefile
+  - scratch/
