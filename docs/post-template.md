@@ -76,7 +76,7 @@ Best validation accuracy (%), three seeds, on 10k-train / 2k-validation subsets:
 
 <div class="table-scroll" markdown="1">
 
-| Arm | IMDB | AG News |
+| Configuration | IMDB | AG News |
 |---|---:|---:|
 | Predicted per-word epsilon | 86.53 | 87.68 |
 | Bag-of-words reference | 85.25 | 87.45 |

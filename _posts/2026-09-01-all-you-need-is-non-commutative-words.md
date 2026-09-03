@@ -4,10 +4,15 @@ title: "All You Need Is Non-Commutative Words"
 date: 2026-09-01
 description: "Our paper is on arXiv: words as unitary matrices and sentences as their ordered product, so word order comes from the algebra instead of a positional encoding."
 tags: [paper, operator-algebra, nlp]
-image: /assets/img/main_model.png
+image: /assets/img/sentence_path.png
 ---
 
 Our paper is on arXiv: [**All You Need Is Non-Commutative Words**](https://arxiv.org/abs/2608.29314) — [abstract](https://arxiv.org/abs/2608.29314) · [PDF](https://arxiv.org/pdf/2608.29314) · [code (MIT)](https://github.com/stanlee321/operator-transformer). It is joint work with **Carla M. Quispe Flores** (Colorado School of Mines), who is first author and my equal contributor on it, and **Renan Cabrera**, whose 2010 canonical-coset decomposition of unitary matrices is the mathematical foundation the readout and the continual-learning tower are built on. arXiv:2608.29314 [cs.CL], listed 29 Aug 2026.
+
+<figure>
+<img src="/assets/img/sentence_path.png" alt="Words are rotations. A sentence is a path.">
+<figcaption>Each word is a rotation in a different plane; a sentence applies them in order. The same words in a different order trace a different path and end somewhere else.</figcaption>
+</figure>
 
 ## The idea in one line
 
@@ -43,7 +48,7 @@ Best validation accuracy (%), three-seed means, on 10k-train / 2k-validation sub
 
 <div class="table-scroll" markdown="1">
 
-| Arm | IMDB | AG News |
+| Configuration | IMDB | AG News |
 |---|---:|---:|
 | Predicted per-word epsilon | 86.53 | 87.68 |
 | Global epsilon | 85.28 | 87.45 |

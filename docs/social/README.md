@@ -68,7 +68,7 @@ Specifically, in a social draft you still may not:
 - publish a number outside the allowed list in `../editorial-policy.md` §2.1,
 - say "beats transformers", "SOTA", or any superlative,
 - use the word "quantum" outside the verbatim physics sentence,
-- mention any unpublished follow-up work, experiment code, or arm name,
+- mention any unpublished follow-up work, experiment code, or internal configuration name,
 - link or name the private repository.
 
 ---

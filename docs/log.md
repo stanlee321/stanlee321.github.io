@@ -113,3 +113,11 @@ the Pages build for a given commit) and `scripts/live_check.sh` (200/404
 matrix, social-card tags, served-content term sweep). `docs/index.md` open
 items refreshed (LinkedIn placeholder removed, math_engine null, explainer owed).
 Profile repo purged to README + LICENSE; stale branches deleted.
+
+## 2026-09-02 — Wording
+
+"Arm" (internal lab word for an experimental configuration) replaced by "Configuration" in the post table, the post template, and the social README. Not pushed yet.
+
+## 2026-09-02 — Cover figure
+
+The team-approved public figure ("Words are rotations. A sentence is a path.", wording by Carla and Renan) added to the announcement post above the technical explanation and set as its social-card image (assets/img/sentence_path.png). Not pushed yet.
