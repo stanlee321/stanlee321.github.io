@@ -10,47 +10,27 @@ list; no forbidden content; code link goes to the public MIT repo only.
 
 ---
 
-## LinkedIn — long form
+## LinkedIn — long form (Stanley's post, 2026-09-02, complements Carla's and Renan's)
 
-**Word count: 246** (body, excluding the link lines and hashtags).
+Attach the cover figure (assets/img/sentence_path.png) as the image. Tag Carla and Renan with LinkedIn mentions.
 
----
+Our paper is on arXiv: "All You Need Is Non-Commutative Words", with Carla M. Quispe Flores (co-first author) and Renan Cabrera, whose 2010 work on the canonical coset decomposition of unitary matrices is the mathematical foundation we built on.
 
-Our paper is on arXiv: *All You Need Is Non-Commutative Words*.
+The idea fits in one picture. Each word is a rotation in a different plane. A sentence applies those rotations in order. Rotations don't commute, so "not bad, quite good" and "not good, quite bad" trace different paths and end in different places, even though a bag-of-words model sees the same four words. The label is simply read off where you ended. No positional encodings, because the order is the path.
 
-The idea is small. Represent each word as a unitary matrix, and represent a
-sentence as the ordered product of its words' matrices. Matrix multiplication
-does not commute, so the product for "dog bites man" is not the product for "man
-bites dog" — word order is carried by the algebra itself. There is no positional
-encoding in the model, because there is nothing left for one to do.
+What the same algebra gives without extra machinery: self-attention with no query, key, or value projections, parallel composition of long documents in chunks, and continual learning that preserves earlier tasks exactly instead of approximately.
 
-The same algebra hands you things that normally need their own machinery:
-self-attention with no query, key, or value projections; parallel composition of
-variable-length chunks at reduced attention cost; a canonical-coset readout; and
-continual learning by nested group extension, which enlarges the operator space
-for a new task while preserving the earlier task's representations exactly.
+What it does not claim: on standard text classification we match bag-of-words baselines, higher on IMDB and comparable on AG News, while replacing a ~30,000-dimensional vocabulary space with 64 numbers per word. The construction is inspired by the mathematics of quantum mechanics, but every computation is classical and we claim no quantum advantage.
 
-On standard text-classification benchmarks the method matches bag-of-words
-baselines — higher on IMDB through a learned per-word rotation budget,
-comparable on AG News — and the QKV-free attention sits at parity with a matched
-transformer. The result worth attention is the cost: a conventional
-~30,000-dimensional vocabulary space replaced by a dense, 64-parameter
-real-valued encoding.
-
-This construction is inspired by the mathematics of quantum mechanics, but every
-computation here is classical and we claim no quantum advantage.
-
-Joint work with Carla M. Quispe Flores (Colorado School of Mines), first author
-and my equal contributor, and Renan Cabrera, whose 2010 canonical-coset
-decomposition of unitary matrices is the foundation the readout is built on.
+The engineer's part of the story: the whole experimental program ran on a desk machine and one workstation, from Bolivia, with a small team. The code is public under MIT, with the raw logs every table is rebuilt from, so anyone can check us.
 
 Paper: https://arxiv.org/abs/2608.29314
+Code: https://github.com/stanlee321/operator-transformer
 Write-up: https://stanlee321.github.io/blog/2026/09/all-you-need-is-non-commutative-words/
-Code (MIT): https://github.com/stanlee321/operator-transformer
 
-#MachineLearning #NLP #Research
+#MachineLearning #NLP #GroupTheory #Bolivia
 
----
+(~290 words)
 
 ## X — thread of 6
 
